@@ -1,0 +1,11 @@
+#!/bin/bash
+DEST="`pwd`" DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )" && \
+# Generating gitignore curl -sL https://www.gitignore.io/api/swift >> .gitignore
+$(cp $DIR/Swift.gitignore $DEST/.gitignore && git add . && git commit -m "Setup - adding gitignore") \;
+# Initialize cocoapods
+# execute pod install and open terminal at project
+osascript <<EOD
+  tell app "Terminal"
+    do script "cd $DEST && pod init && pod install && git add . && git commit -m \"Setup - adding Pods\""
+  end tell
+EOD 
