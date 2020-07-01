@@ -1,5 +1,7 @@
 // @copyright Agoda Services Co. Ltd
 
+import Kingfisher
+import Moya
 import UIKit
 
 @UIApplicationMain

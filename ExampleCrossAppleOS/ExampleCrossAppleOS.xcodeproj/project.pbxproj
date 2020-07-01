@@ -24,6 +24,9 @@
 		02E08AFF24AC603C004C00C6 /* ExampleCrossAppleOSTouch.h in Headers */ = {isa = PBXBuildFile; fileRef = 02E08AFD24AC603C004C00C6 /* ExampleCrossAppleOSTouch.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		02E08B0224AC603C004C00C6 /* ExampleCrossAppleOSTouch.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 02E08AFB24AC603C004C00C6 /* ExampleCrossAppleOSTouch.framework */; };
 		02E08B0324AC603C004C00C6 /* ExampleCrossAppleOSTouch.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 02E08AFB24AC603C004C00C6 /* ExampleCrossAppleOSTouch.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		02E08B0924AC6AB0004C00C6 /* ExampleCrossAppleOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 02E08A8724AC5DD8004C00C6 /* ExampleCrossAppleOS.framework */; };
+		02E08B0A24AC6AB0004C00C6 /* ExampleCrossAppleOS.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 02E08A8724AC5DD8004C00C6 /* ExampleCrossAppleOS.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		15D34005BF153F3258E0A310 /* Pods_ExampleMacOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A4B514F0B111D4805C0D32CC /* Pods_ExampleMacOS.framework */; };
 		24DE1D92F19586A225AB8D1D /* Pods_ExampleIOSTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 463DDBEC8ED87CC4CDEDF60F /* Pods_ExampleIOSTests.framework */; };
 		41688B73856334DE07DAB7B9 /* Pods_ExampleIOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D994E89A625DD5B47162796A /* Pods_ExampleIOS.framework */; };
 		604706264134FD1DC40EEFE7 /* Pods_ExampleCrossAppleOSTouch.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2182A878273186CB947315B3 /* Pods_ExampleCrossAppleOSTouch.framework */; };
@@ -31,7 +34,6 @@
 		A33BEAF8DAFAD129D117ED71 /* Pods_ExampleIOSUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B4F4990B55605C5F431F1572 /* Pods_ExampleIOSUITests.framework */; };
 		B3BE6F828241663400983A3E /* Pods_ExampleMacOSTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 216AFCD14A7BA44D3DCA36E4 /* Pods_ExampleMacOSTests.framework */; };
 		C9F27DF76AB23FC2BAA9F8C1 /* Pods_ExampleCrossAppleOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 257FCAB9361BCFFB236C3BF0 /* Pods_ExampleCrossAppleOS.framework */; };
-		E3926EE03BD52158ACCE90E7 /* Pods_ExampleMacOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A4B514F0B111D4805C0D32CC /* Pods_ExampleMacOS.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -70,6 +72,13 @@
 			remoteGlobalIDString = 02E08AFA24AC603C004C00C6;
 			remoteInfo = ExampleCrossAppleOSTouch;
 		};
+		02E08B0B24AC6AB0004C00C6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 02E08A7E24AC5DD8004C00C6 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 02E08A8624AC5DD8004C00C6;
+			remoteInfo = ExampleCrossAppleOS;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -80,6 +89,17 @@
 			dstSubfolderSpec = 10;
 			files = (
 				02E08B0324AC603C004C00C6 /* ExampleCrossAppleOSTouch.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		02E08B0D24AC6AB0004C00C6 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				02E08B0A24AC6AB0004C00C6 /* ExampleCrossAppleOS.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -158,7 +178,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E3926EE03BD52158ACCE90E7 /* Pods_ExampleMacOS.framework in Frameworks */,
+				02E08B0924AC6AB0004C00C6 /* ExampleCrossAppleOS.framework in Frameworks */,
+				15D34005BF153F3258E0A310 /* Pods_ExampleMacOS.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -413,10 +434,13 @@
 				02E08A9224AC5E29004C00C6 /* Sources */,
 				02E08A9324AC5E29004C00C6 /* Frameworks */,
 				02E08A9424AC5E29004C00C6 /* Resources */,
+				65B6DB3A42CF20BF0AAC1F93 /* [CP] Embed Pods Frameworks */,
+				02E08B0D24AC6AB0004C00C6 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				02E08B0C24AC6AB0004C00C6 /* PBXTargetDependency */,
 			);
 			name = ExampleMacOS;
 			productName = ExampleMacOS;
@@ -471,6 +495,7 @@
 				02E08AC424AC5E55004C00C6 /* Resources */,
 				02E08B0724AC603D004C00C6 /* Embed Frameworks */,
 				02E08B0824AC65CE004C00C6 /* ShellScript */,
+				51BDC00296063257AA3B40A7 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -593,13 +618,13 @@
 			projectRoot = "";
 			targets = (
 				02E08A8624AC5DD8004C00C6 /* ExampleCrossAppleOS */,
+				02E08AFA24AC603C004C00C6 /* ExampleCrossAppleOSTouch */,
 				02E08AC524AC5E55004C00C6 /* ExampleIOS */,
 				02E08ADA24AC5E5A004C00C6 /* ExampleIOSTests */,
 				02E08AE524AC5E5B004C00C6 /* ExampleIOSUITests */,
 				02E08A9524AC5E29004C00C6 /* ExampleMacOS */,
 				02E08AA624AC5E30004C00C6 /* ExampleMacOSTests */,
 				02E08AB124AC5E31004C00C6 /* ExampleMacOSUITests */,
-				02E08AFA24AC603C004C00C6 /* ExampleCrossAppleOSTouch */,
 			);
 		};
 /* End PBXProject section */
@@ -730,6 +755,32 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		51BDC00296063257AA3B40A7 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-ExampleIOS/Pods-ExampleIOS-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire-iOS/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/Kingfisher-iOS/Kingfisher.framework",
+				"${BUILT_PRODUCTS_DIR}/Moya-iOS/Moya.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Moya.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ExampleIOS/Pods-ExampleIOS-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		5265FA9EFD8C9980CB18FC5D /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -772,6 +823,32 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		65B6DB3A42CF20BF0AAC1F93 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-ExampleMacOS/Pods-ExampleMacOS-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire-macOS/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/Kingfisher-macOS/Kingfisher.framework",
+				"${BUILT_PRODUCTS_DIR}/Moya-macOS/Moya.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Moya.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ExampleMacOS/Pods-ExampleMacOS-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		97BD8B48E619435B3C7C51F7 /* [CP] Check Pods Manifest.lock */ = {
@@ -957,6 +1034,11 @@
 			target = 02E08AFA24AC603C004C00C6 /* ExampleCrossAppleOSTouch */;
 			targetProxy = 02E08B0024AC603C004C00C6 /* PBXContainerItemProxy */;
 		};
+		02E08B0C24AC6AB0004C00C6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 02E08A8624AC5DD8004C00C6 /* ExampleCrossAppleOS */;
+			targetProxy = 02E08B0B24AC6AB0004C00C6 /* PBXContainerItemProxy */;
+		};
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
@@ -1039,7 +1121,7 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
-				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -1097,7 +1179,7 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
-				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = macosx;
@@ -1120,11 +1202,6 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = ExampleCrossAppleOS/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/../Frameworks",
-					"@loader_path/Frameworks",
-				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.yasirmturk.ExampleCrossAppleOS;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
@@ -1144,11 +1221,6 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = ExampleCrossAppleOS/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/../Frameworks",
-					"@loader_path/Frameworks",
-				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.yasirmturk.ExampleCrossAppleOS;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
@@ -1162,13 +1234,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = ExampleMacOS/ExampleMacOS.entitlements;
+				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = ExampleMacOS/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/../Frameworks",
-				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.yasirmturk.ExampleMacOS;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -1181,13 +1250,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = ExampleMacOS/ExampleMacOS.entitlements;
+				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = ExampleMacOS/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/../Frameworks",
-				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.yasirmturk.ExampleMacOS;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -1203,11 +1269,6 @@
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = ExampleMacOSTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/../Frameworks",
-					"@loader_path/../Frameworks",
-				);
 				MACOSX_DEPLOYMENT_TARGET = 10.14;
 				PRODUCT_BUNDLE_IDENTIFIER = com.yasirmturk.ExampleMacOSTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -1225,11 +1286,6 @@
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = ExampleMacOSTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/../Frameworks",
-					"@loader_path/../Frameworks",
-				);
 				MACOSX_DEPLOYMENT_TARGET = 10.14;
 				PRODUCT_BUNDLE_IDENTIFIER = com.yasirmturk.ExampleMacOSTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -1246,11 +1302,6 @@
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = ExampleMacOSUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/../Frameworks",
-					"@loader_path/../Frameworks",
-				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.yasirmturk.ExampleMacOSUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -1266,11 +1317,6 @@
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = ExampleMacOSUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/../Frameworks",
-					"@loader_path/../Frameworks",
-				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.yasirmturk.ExampleMacOSUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -1285,10 +1331,6 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = ExampleIOS/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.yasirmturk.ExampleIOS;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
@@ -1304,10 +1346,6 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = ExampleIOS/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.yasirmturk.ExampleIOS;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
@@ -1326,11 +1364,6 @@
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = ExampleIOSTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.yasirmturk.ExampleIOSTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
@@ -1349,11 +1382,6 @@
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = ExampleIOSTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.yasirmturk.ExampleIOSTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
@@ -1372,11 +1400,6 @@
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = ExampleIOSUITests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.yasirmturk.ExampleIOSUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
@@ -1394,11 +1417,6 @@
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = ExampleIOSUITests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.yasirmturk.ExampleIOSUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
@@ -1421,11 +1439,6 @@
 				INFOPLIST_FILE = ExampleCrossAppleOSTouch/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.yasirmturk.ExampleCrossAppleOSTouch;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SDKROOT = iphoneos;
@@ -1447,11 +1460,6 @@
 				INFOPLIST_FILE = ExampleCrossAppleOSTouch/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.yasirmturk.ExampleCrossAppleOSTouch;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SDKROOT = iphoneos;

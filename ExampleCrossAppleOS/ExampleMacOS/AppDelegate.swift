@@ -1,6 +1,8 @@
 // @copyright Agoda Services Co. Ltd
 
 import Cocoa
+import Kingfisher
+import Moya
 
 @NSApplicationMain
 class AppDelegate: NSObject, NSApplicationDelegate {
